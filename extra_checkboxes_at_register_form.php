@@ -1,4 +1,4 @@
-// Add term and conditions check box on registration form
+<?php // Add term and conditions check box on registration form
 add_action( 'woocommerce_register_form', 'add_terms_and_conditions_to_registration', 20 );
 function add_terms_and_conditions_to_registration() {
 
@@ -37,4 +37,3 @@ function terms_and_conditions_validation( $username, $email, $validation_errors 
 				$validation_errors->add( 'terms_error', __( 'Wyraź zgodę na przetwarzanie danych osobowych', 'woocommerce' ) );
 		}else{
     return $validation_errors;
-		
